@@ -1,0 +1,60 @@
+<!doctype html>
+<!--                   | \                    
+  ________             |  |                   
+ /  _____/___________  |  |_______    _____  
+/   \  __\   __ \__  \ |    \___  \  /     \ 
+\    \_\  \  | \// _  \|  |  |/ _  \|  Y Y  \
+ \______  /__|  (____  /__|  (____  /__|_|  /
+        \/           \/     \/     \/      \/ 
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Top 15 Movies By Genre/Year</title>
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <link rel="icon" href="http://iconeasy.com/icon/ico/Movie%20%26%20TV/Curtains/PopCorn.ico" type="image/x-icon">
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <div id="query">
+    Genre:
+    <!-- Genre Referances: https://api.themoviedb.org/3/genre/movie/list?api_key=5d576382955ff5829fc3844390db4427&language=en-US -->
+      <select id="genre">
+        <option value="">-- Select --</option>
+        <option value="28">Action</option>
+        <option value="12">Adventure</option>
+        <option value="16">Animation</option>
+        <option value="35">Comedy</option>
+        <option value="80">Crime</option>
+        <option value="99">Documentary</option>
+        <option value="18">Drama</option>
+        <option value="10751">Family</option>
+        <option value="14">Fantasy</option>
+        <option value="36">History</option>
+        <option value="27">Horror</option>
+        <option value="10402">Music</option>
+        <option value="9648">Mystery</option>
+        <option value="10749">Romance</option>
+        <option value="878">Science Fiction</option>
+        <option value="10770">TV Movie</option>
+        <option value="53">Thriller</option>
+        <option value="10752">War</option>
+        <option value="37">Western</option>
+      </select>
+      Year:
+      <input type="text" id="year" placeholder='"ex: 2018"'/>
+      <button type="button">Search</button>
+    </div>
+    <div class="container">
+      <div id="movies" style="float: left; width: 60%;"></div>
+      <div id="info" style="float: right; width: 30%">
+        <h1>
+          <span id="hoverTitle">*** For a more detailed overview, hover mouse over movie posters ***</span>
+          <span id="hoverYear"></span>
+        </h1>
+        <p id="hoverSummary"></p>
+      </div>
+    </div>
+  </body>
+</html>
